@@ -3,7 +3,7 @@ import 'dart:convert';
 class Empresa {
   int? id;
   String ruc;
-  String name;
+  String nombre;
   bool estado;
   String? telefono;
   String? descripcion;
@@ -15,7 +15,7 @@ class Empresa {
   Empresa(
       {this.id,
       required this.ruc,
-      required this.name,
+      required this.nombre,
       required this.estado,
       this.telefono,
       this.descripcion,
@@ -31,7 +31,7 @@ class Empresa {
   factory Empresa.fromMap(Map<String, dynamic> json) => Empresa(
         id: json["id"],
         ruc: json["ruc"],
-        name: json["name"],
+        nombre: json["nombre"],
         estado: json["estado"],
         email: json["email"],
         telefono: json["telefono"],
@@ -43,7 +43,7 @@ class Empresa {
   Map<String, dynamic> toMap() => {
         "id": id,
         "ruc": ruc,
-        "name": name,
+        "nombre": nombre,
         "estado": estado,
         "telefono": telefono,
         "descripcion": descripcion,
