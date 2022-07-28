@@ -9,8 +9,8 @@ class Empresa {
   String? descripcion;
   String? email;
   String? direccion;
-  int numeroDeEmpleados;
-  DateTime? fechaDeCreacion;
+  int numeroEmpleados;
+  DateTime? fechaCreacion;
 
   Empresa(
       {this.id,
@@ -21,8 +21,8 @@ class Empresa {
       this.descripcion,
       this.email,
       this.direccion,
-      required this.numeroDeEmpleados,
-      this.fechaDeCreacion});
+      required this.numeroEmpleados,
+      this.fechaCreacion});
 
   factory Empresa.fromJson(String str) => Empresa.fromMap(json.decode(str));
 
@@ -36,8 +36,8 @@ class Empresa {
         email: json["email"],
         telefono: json["telefono"],
         descripcion: json["descripcion"],
-        numeroDeEmpleados: json["numeroDeEmpleados"],
-        fechaDeCreacion: json["fechaDeCreacion"],
+        numeroEmpleados: json["numeroEmpleados"],
+        fechaCreacion: json["fechaCreacion"],
       );
 
   Map<String, dynamic> toMap() => {
@@ -49,7 +49,7 @@ class Empresa {
         "descripcion": descripcion,
         "email": email,
         "direccion": direccion,
-        "numeroDeEmpleados": numeroDeEmpleados,
-        "fechaDeCreacion": fechaDeCreacion,
+        "numeroEmpleados": numeroEmpleados,
+        "fechaCreacion": fechaCreacion,
       };
 }
