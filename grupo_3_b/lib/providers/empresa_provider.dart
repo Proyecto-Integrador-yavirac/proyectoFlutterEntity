@@ -9,13 +9,18 @@ class EmpresaProvider extends ChangeNotifier {
   String language = 'es-ES';
   final List<Empresa> empresas = [];
 
+  EmpresaProvider() {
+    getEmpresas();
+    print('hola');
+  }
+
   Future<List<Empresa>> getEmpresas() async {
-    var url = Uri.http(_baseUrl, 'users');
+    var url = Uri.http(_baseUrl, 'api/empresa/findAll');
     var response = await http.get(url);
     List<dynamic> usersList = json.decode(response.body);
-    usersList.forEach((user) {
-      final userTemp = Empresa.fromMap(user);
-      empresas.add(userTemp);
+    usersList.forEach((empresa) {
+      final empresaTemp = Empresa.fromMap(empresa);
+      empresas.add(empresaTemp);
     });
     return empresas;
   }

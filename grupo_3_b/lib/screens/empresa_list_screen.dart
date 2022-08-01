@@ -17,9 +17,19 @@ class EmpresaList extends StatelessWidget {
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
                 leading: const Icon(
-                  Icons.people,
+                  Icons.apartment,
                 ),
-                title: Text(empresaProvider.empresas[index].ruc),
+                title: Row(
+                  children: [
+                    const Text("Ruc:"),
+                    Text(empresaProvider.empresas[index].ruc),
+                    const SizedBox(
+                      width: 100,
+                    ),
+                    const Text("Nombre:"),
+                    Text(empresaProvider.empresas[index].nombre)
+                  ],
+                ),
                 onTap: () {
                   Navigator.pushNamed(context, 'empresa-form');
                 },
