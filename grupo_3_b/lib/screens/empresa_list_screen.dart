@@ -32,6 +32,7 @@ class EmpresaList extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, 'empresa-form');
+                  print(empresaProvider.empresas[index].id!);
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),

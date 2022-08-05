@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomInputField extends StatelessWidget{
+class CustomInputField extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final String? helperText;
@@ -9,16 +9,22 @@ class CustomInputField extends StatelessWidget{
   final TextInputType? keyboardType;
   final bool obscureText;
   final String? Advert;
- 
+  final Map<String, dynamic> formValues;
+  final String formProperty;
 
-  const CustomInputField({ Key? key, 
-  this.hintText,this.labelText,
-  this.helperText,this.suffixIcon,
-  this.icon, this.keyboardType,
-  required this.obscureText, 
-  this.Advert,
-  }) 
-    : super(key: key);
+  const CustomInputField({
+    Key? key,
+    this.hintText,
+    this.labelText,
+    this.helperText,
+    this.suffixIcon,
+    this.icon,
+    this.keyboardType,
+    required this.obscureText,
+    this.Advert,
+    required this.formValues,
+    required this.formProperty,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,17 +33,16 @@ class CustomInputField extends StatelessWidget{
       obscureText: obscureText,
       // initialValue: 'Juan Perez',
       textCapitalization: TextCapitalization.words,
-      
+      onChanged: (value) => formValues[formProperty] = value,
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      
-      decoration:  InputDecoration(
+
+      decoration: InputDecoration(
         hintText: '$hintText',
         labelText: '$labelText',
         helperText: '$helperText',
-        suffixIcon:  suffixIcon,
+        suffixIcon: suffixIcon,
         icon: icon,
       ),
     );
   }
-
 }
