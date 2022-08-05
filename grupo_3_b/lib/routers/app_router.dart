@@ -17,6 +17,11 @@ class AppRoutes {
         icon: Icons.list,
         name: 'Empresa List',
         screen: const EmpresaList()),
+    EmpresaOption(
+        route: 'empresa-form', 
+        icon: Icons.forum_outlined, 
+        name: 'Empresa Form', 
+        screen: const EmpresaForm())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
