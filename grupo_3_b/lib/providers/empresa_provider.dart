@@ -65,8 +65,8 @@ class EmpresaProvider extends ChangeNotifier {
         body: jsonEncode(request));
   }
 
-  updateEmpresa(int id, request) async {
-    var url = Uri.http(_baseUrl, 'api/empresa/$id');
+  updateEmpresa( request) async {
+    var url = Uri.http(_baseUrl, 'api/empresa/update');
     var response = await http.put(url,
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',

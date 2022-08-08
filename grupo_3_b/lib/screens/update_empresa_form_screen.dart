@@ -12,8 +12,10 @@ class UpdateEmpresaForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, dynamic> valores = empresaValues;
     final GlobalKey<FormState> empresaKey = GlobalKey<FormState>();
     final empresaProvider = Provider.of<EmpresaProvider>(context);
+    
     return Scaffold(
       appBar: AppBar(
         title: const Text('Formulario'),
@@ -21,9 +23,9 @@ class UpdateEmpresaForm extends StatelessWidget {
       body: SingleChildScrollView(
           child: CustomForm(
         empresaKey: empresaKey,
-        empresaValues: empresaValues,
+        empresaValues: valores,
         onChanged: () =>
-            {empresaProvider.updateEmpresa(empresaValues['id'], empresaValues)},
+            {empresaProvider.updateEmpresa( valores)},
       )),
     );
   }

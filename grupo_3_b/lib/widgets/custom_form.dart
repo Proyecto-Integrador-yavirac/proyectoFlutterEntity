@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grupo_3_b/models/empresa.dart';
 import 'package:grupo_3_b/widgets/widgets.dart';
 
 import '../themes/theme.dart';

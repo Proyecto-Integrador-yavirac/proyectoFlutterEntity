@@ -31,7 +31,7 @@ class CustomInputField extends StatelessWidget {
     return TextFormField(
       keyboardType: keyboardType,
       obscureText: obscureText,
-      // initialValue: 'Juan Perez',
+      initialValue: formValues[formProperty],
       textCapitalization: TextCapitalization.words,
       onChanged: (value) => formValues[formProperty] = value,
       autovalidateMode: AutovalidateMode.onUserInteraction,
