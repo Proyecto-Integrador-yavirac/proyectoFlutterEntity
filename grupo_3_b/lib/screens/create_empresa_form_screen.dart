@@ -32,7 +32,10 @@ class CreateEmpresaForm extends StatelessWidget {
           child: CustomForm(
         empresaKey: empresaKey,
         empresaValues: empresaValues,
-        onChanged: () => {empresaProvider.createEmpresa(empresaValues)},
+        onChanged: () => {
+          empresaProvider.createEmpresa(empresaValues),
+          Navigator.pop(context)
+        },
       )),
     );
   }

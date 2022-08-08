@@ -15,18 +15,19 @@ class UpdateEmpresaForm extends StatelessWidget {
     final Map<String, dynamic> valores = empresaValues;
     final GlobalKey<FormState> empresaKey = GlobalKey<FormState>();
     final empresaProvider = Provider.of<EmpresaProvider>(context);
-    
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Formulario'),
       ),
       body: SingleChildScrollView(
           child: CustomForm(
-        empresaKey: empresaKey,
-        empresaValues: valores,
-        onChanged: () =>
-            {empresaProvider.updateEmpresa( valores)},
-      )),
+              empresaKey: empresaKey,
+              empresaValues: valores,
+              onChanged: () => {
+                    empresaProvider.updateEmpresa(valores),
+                    Navigator.pop(context)
+                  })),
     );
   }
 }
