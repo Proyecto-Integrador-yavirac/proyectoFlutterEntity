@@ -56,7 +56,7 @@ class EmpresaProvider extends ChangeNotifier {
     return empresa;
   }
 
-  createUser(request) async {
+  createEmpresa(request) async {
     var url = Uri.http(_baseUrl, 'api/empresa/save');
     var response = await http.post(url,
         headers: <String, String>{
@@ -65,7 +65,7 @@ class EmpresaProvider extends ChangeNotifier {
         body: jsonEncode(request));
   }
 
-  updateUser(int id, request) async {
+  updateEmpresa(int id, request) async {
     var url = Uri.http(_baseUrl, 'api/empresa/$id');
     var response = await http.put(url,
         headers: <String, String>{
@@ -74,7 +74,7 @@ class EmpresaProvider extends ChangeNotifier {
         body: jsonEncode(request));
   }
 
-  deleteUser(int id) async {
+  deleteEmpresa(int id) async {
     var url = Uri.http(_baseUrl, 'api/empresa/$id');
     var response = await http.delete(url);
   }
