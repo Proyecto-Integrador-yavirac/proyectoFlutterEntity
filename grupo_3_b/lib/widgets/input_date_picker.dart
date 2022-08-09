@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class InputDatePickerField extends StatefulWidget {
   final Map<String, dynamic> formValues;
   final String formProperty;
-  InputDatePickerField(
+  const InputDatePickerField(
       {Key? key, required this.formValues, required this.formProperty})
       : super(key: key);
 
@@ -14,14 +14,13 @@ class InputDatePickerField extends StatefulWidget {
 class _InputDatePickerFieldState extends State<InputDatePickerField> {
   @override
   Widget build(BuildContext context) {
-    DateTime selectedDate = DateTime(2022, 12, 12);
     return InputDatePickerFormField(
         firstDate: DateTime(2019),
-        lastDate: DateTime(2020, 12, 12),
-        initialDate: selectedDate,
+        lastDate: DateTime(3020, 12, 12),
+        initialDate: widget.formValues[widget.formProperty],
         onDateSubmitted: (date) {
           setState(() {
-            selectedDate = date;
+            widget.formValues[widget.formProperty] = '$date';
           });
         });
   }

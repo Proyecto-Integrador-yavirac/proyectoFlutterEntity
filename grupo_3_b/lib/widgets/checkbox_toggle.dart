@@ -18,11 +18,10 @@ class _CheckboxToggleState extends State<CheckboxToggle> {
   @override
   Widget build(BuildContext context) {
     return Switch(
-      value: isSwitched,
+      value: widget.formValues[widget.formProperty],
       onChanged: (value) {
         setState(() {
-          isSwitched = value;
-          print(isSwitched);
+          widget.formValues[widget.formProperty] = value;
         });
       },
       activeTrackColor: Colors.lightGreenAccent,
