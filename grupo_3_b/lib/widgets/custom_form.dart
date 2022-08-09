@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grupo_3_b/models/empresa.dart';
+import 'package:grupo_3_b/widgets/input_date_picker.dart';
 import 'package:grupo_3_b/widgets/widgets.dart';
 
 import '../themes/theme.dart';
@@ -107,7 +108,11 @@ class CustomForm extends StatelessWidget {
             keyboardType: TextInputType.text,
             obscureText: false,
           ),
-          const CheckboxToggle(value: false),
+          InputDatePickerField(
+            formProperty: 'fechaCreacion',
+            formValues: empresaValues,
+          ),
+          CheckboxToggle(formValues: empresaValues, formProperty: 'estado'),
           ElevatedButton.icon(
             onPressed: onChanged,
             icon: const Icon(Icons.save),
