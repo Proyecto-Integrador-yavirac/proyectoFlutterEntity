@@ -58,16 +58,16 @@ class EmpresaProvider extends ChangeNotifier {
 
   createEmpresa(request) async {
     var url = Uri.http(_baseUrl, 'api/empresa/save');
-    var response = await http.post(url,
+    await http.post(url,
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
         body: jsonEncode(request));
   }
 
-  updateEmpresa( request) async {
+  updateEmpresa(request) async {
     var url = Uri.http(_baseUrl, 'api/empresa/update');
-    var response = await http.put(url,
+    await http.put(url,
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
@@ -76,6 +76,6 @@ class EmpresaProvider extends ChangeNotifier {
 
   deleteEmpresa(int id) async {
     var url = Uri.http(_baseUrl, 'api/empresa/$id');
-    var response = await http.delete(url);
+    await http.delete(url);
   }
 }
