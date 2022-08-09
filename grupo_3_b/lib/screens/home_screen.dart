@@ -21,7 +21,9 @@ class HomeScreen extends StatelessWidget {
                   ),
               separatorBuilder: (_, __) => const Divider(),
               itemCount: menuOptions.length)),
-      body: const Text('Hola'),
+      body: Center(
+        child: Image.asset('assets/bienvenido.png'),
+      ),
     );
   }
 }
