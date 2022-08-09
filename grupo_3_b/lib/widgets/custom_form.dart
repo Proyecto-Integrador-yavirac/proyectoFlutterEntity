@@ -47,11 +47,11 @@ class CustomForm extends StatelessWidget {
             helperText: 'ingrese al menos 9 numeros',
             suffixIcon: const Icon(
               Icons.travel_explore_sharp,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 2, 74, 3),
             ),
             icon: const Icon(
               Icons.supervised_user_circle_rounded,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 2, 74, 13),
             ),
             keyboardType: TextInputType.text,
             obscureText: false,
@@ -64,11 +64,11 @@ class CustomForm extends StatelessWidget {
             helperText: 'Breve detalle a que se dedica la empresa ',
             suffixIcon: const Icon(
               Icons.supervisor_account,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 4, 93, 16),
             ),
             icon: const Icon(
               Icons.supervised_user_circle_rounded,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 15, 74, 2),
             ),
             keyboardType: TextInputType.text,
             obscureText: false,

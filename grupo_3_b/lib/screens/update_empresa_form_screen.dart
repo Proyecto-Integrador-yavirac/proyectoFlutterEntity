@@ -18,8 +18,20 @@ class UpdateEmpresaForm extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Formulario'),
-      ),
+          elevation: 0,
+          title: const Text('Formulario'),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 92, 96, 185),
+                  Color.fromARGB(255, 2, 28, 90)
+                ],
+                begin: Alignment.bottomRight,
+                end: Alignment.topLeft,
+              ),
+            ),
+          )),
       body: SingleChildScrollView(
           child: CustomForm(
               empresaKey: empresaKey,
