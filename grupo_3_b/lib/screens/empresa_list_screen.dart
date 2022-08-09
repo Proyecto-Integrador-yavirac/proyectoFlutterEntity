@@ -11,8 +11,19 @@ class EmpresaList extends StatelessWidget {
     final empresaProvider = Provider.of<EmpresaProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lista de Empresa'),
-        elevation: 0,
+        title: const Text('Lista'),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 92, 96, 185),
+                Color.fromARGB(255, 2, 28, 90)
+              ],
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
+            ),
+          ),
+        ),
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
