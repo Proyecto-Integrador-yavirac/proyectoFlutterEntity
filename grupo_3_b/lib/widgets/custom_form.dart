@@ -107,6 +107,23 @@ class CustomForm extends StatelessWidget {
             keyboardType: TextInputType.text,
             obscureText: false,
           ),
+           CustomInputField(
+            formProperty: 'direccion',
+            formValues: empresaValues,
+            hintText: 'Escriba su direccion:',
+            labelText: 'Direccion',
+            helperText: 'Escriba ambas calles',
+            suffixIcon: const Icon(
+              Icons.supervisor_account,
+              color: AppTheme.primary,
+            ),
+            icon: const Icon(
+              Icons.supervised_user_circle_rounded,
+              color: AppTheme.primary,
+            ),
+            keyboardType: TextInputType.text,
+            obscureText: false,
+          ),
           InputDatePickerField(
             formProperty: 'fechaCreacion',
             formValues: empresaValues,

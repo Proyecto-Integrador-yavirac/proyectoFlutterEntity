@@ -37,6 +37,7 @@ class Empresa {
         telefono: json["telefono"],
         descripcion: json["descripcion"],
         numeroEmpleados: json["numeroEmpleados"],
+        direccion: json["direccion"],
         fechaCreacion: json["fechaCreacion"],
       );
 

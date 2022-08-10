@@ -33,6 +33,7 @@ class EmpresaList extends StatelessWidget {
                 title: Row(
                   children: [
                     const Text("Ruc:"),
+                    Text(empresaProvider.empresas[index].ruc),
                     const SizedBox(
                       width: 100,
                     ),

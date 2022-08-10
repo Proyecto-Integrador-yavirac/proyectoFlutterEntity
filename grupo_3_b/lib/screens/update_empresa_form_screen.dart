@@ -19,7 +19,7 @@ class UpdateEmpresaForm extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           elevation: 0,
-          title: const Text('Formulario'),
+          title: const Text('Formulario edita'),
           flexibleSpace: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
