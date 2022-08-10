@@ -108,10 +108,19 @@ class CustomForm extends StatelessWidget {
             obscureText: false,
           ),
           const CheckboxToggle(value: false),
-          ElevatedButton.icon(
+          ElevatedButton(
             onPressed: onChanged,
-            icon: const Icon(Icons.save),
-            label: const Text('Guardar'),
+            style: ElevatedButton.styleFrom(
+            primary: AppTheme.primary, 
+            shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+              ), 
+              child: const Text(
+                    'Guardar',
+                    style: TextStyle(fontSize: 18),
+                ),
+                
           )
         ],
       ),
