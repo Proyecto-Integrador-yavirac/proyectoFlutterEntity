@@ -29,7 +29,6 @@ class EmpresaProvider extends ChangeNotifier {
     var response = await http.get(url);
 
     List<dynamic> usersList = json.decode(response.body);
-    print(usersList);
     usersList.forEach((empresa) {
       final empresaTemp = Empresa.fromMap(empresa);
       empresas.add(empresaTemp);

@@ -8,7 +8,6 @@ class CustomInputField extends StatelessWidget {
   final Widget? icon;
   final TextInputType? keyboardType;
   final bool obscureText;
-  final String? Advert;
   final Map<String, dynamic> formValues;
   final String formProperty;
 
@@ -21,7 +20,6 @@ class CustomInputField extends StatelessWidget {
     this.icon,
     this.keyboardType,
     required this.obscureText,
-    this.Advert,
     required this.formValues,
     required this.formProperty,
   }) : super(key: key);

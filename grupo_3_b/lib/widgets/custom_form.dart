@@ -24,11 +24,96 @@ class CustomForm extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 CustomInputField(
+                  formProperty: 'ruc',
+                  formValues: empresaValues,
+                  hintText: 'Escriba su ruc:',
+                  labelText: 'Ruc',
+                  helperText: 'solo rucs validos',
+                  suffixIcon: const Icon(
+                    Icons.supervisor_account,
+                    color: AppTheme.primary,
+                  ),
+                  icon: const Icon(
+                    Icons.supervised_user_circle_rounded,
+                    color: AppTheme.primary,
+                  ),
+                  keyboardType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomInputField(
                   formProperty: 'nombre',
                   formValues: empresaValues,
                   hintText: 'Escriba su nombre:',
                   labelText: 'Nombre',
                   helperText: 'El nombre debe ser de mas de 3 letras',
+                  suffixIcon: const Icon(
+                    Icons.person,
+                    color: AppTheme.primary,
+                  ),
+                  icon: const Icon(
+                    Icons.person,
+                    color: AppTheme.primary,
+                  ),
+                  keyboardType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomInputField(
+                  formProperty: 'ruc',
+                  formValues: empresaValues,
+                  hintText: 'Escriba su ruc:',
+                  labelText: 'Ruc',
+                  helperText: 'solo rucs validos',
+                  suffixIcon: const Icon(
+                    Icons.supervisor_account,
+                    color: AppTheme.primary,
+                  ),
+                  icon: const Icon(
+                    Icons.supervised_user_circle_rounded,
+                    color: AppTheme.primary,
+                  ),
+                  keyboardType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomInputField(
+                  formProperty: 'ruc',
+                  formValues: empresaValues,
+                  hintText: 'Escriba su ruc:',
+                  labelText: 'Ruc',
+                  helperText: 'solo rucs validos',
+                  suffixIcon: const Icon(
+                    Icons.supervisor_account,
+                    color: AppTheme.primary,
+                  ),
+                  icon: const Icon(
+                    Icons.supervised_user_circle_rounded,
+                    color: AppTheme.primary,
+                  ),
+                  keyboardType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomInputField(
+                  formProperty: 'ruc',
+                  formValues: empresaValues,
+                  hintText: 'Escriba su ruc:',
+                  labelText: 'Ruc',
+                  helperText: 'solo rucs validos',
+                  suffixIcon: const Icon(
+                    Icons.supervisor_account,
+                    color: AppTheme.primary,
+                  ),
+                  icon: const Icon(
+                    Icons.supervised_user_circle_rounded,
+                    color: AppTheme.primary,
+                  ),
+                  keyboardType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomInputField(
+                  formProperty: 'ruc',
+                  formValues: empresaValues,
+                  hintText: 'Escriba su ruc:',
+                  labelText: 'Ruc',
+                  helperText: 'solo rucs validos',
                   suffixIcon: const Icon(
                     Icons.supervisor_account,
                     color: AppTheme.primary,
@@ -162,6 +247,10 @@ class CustomForm extends StatelessWidget {
                 Container(
                   child: Row(
                     children: [
+                      const Icon(
+                        Icons.factory_outlined,
+                        color: AppTheme.primary,
+                      ),
                       const Text("Activo"),
                       CheckboxToggle(
                           formValues: empresaValues, formProperty: 'estado')
