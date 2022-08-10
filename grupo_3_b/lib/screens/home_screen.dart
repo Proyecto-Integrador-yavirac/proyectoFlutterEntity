@@ -44,6 +44,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      verticalDirection: VerticalDirection.down,
                       children: [
                         Text(
                           menuOptions[index].name,
