@@ -10,7 +10,7 @@ class AlertDialogDatabaseResponse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('AlertDialog Title'),
+      title: const Text('Estado de Transaccion'),
       content: SingleChildScrollView(
         child: ListBody(
           children: <Widget>[

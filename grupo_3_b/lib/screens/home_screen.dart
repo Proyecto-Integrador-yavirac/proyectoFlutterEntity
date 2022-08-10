@@ -9,9 +9,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final menuOptions = AppRoutes.menuOptions;
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 254, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 254, 255, 255),
         appBar: AppBar(
-          title: const Text('Home Screen Arriba'),
+          title: const Text('Empresas'),
           flexibleSpace: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Container(
           child: GridView.builder(
-            gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3),
             itemBuilder: (context, index) {
               return InkWell(
@@ -37,9 +37,9 @@ class HomeScreen extends StatelessWidget {
                   Navigator.pushNamed(context, menuOptions[index].route);
                 },
                 child: Container(
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(152, 41, 5, 119),
+                      color: const Color.fromARGB(152, 41, 5, 119),
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Column(
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           menuOptions[index].name,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromARGB(255, 246, 245, 245),
                           ),
                         ),

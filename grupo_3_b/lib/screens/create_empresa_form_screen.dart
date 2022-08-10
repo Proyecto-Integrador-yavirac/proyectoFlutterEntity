@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
 import '../providers/providers.dart';
 import '../widgets/alert_dialog.dart';
 import '../widgets/widgets.dart';
@@ -23,7 +24,8 @@ class CreateEmpresaForm extends StatelessWidget {
       'email': '',
       'direccion': '',
       'numeroEmpleados': 0.toString(),
-      'fechaCreacion': DateTime.now().toString(),
+      'fechaCreacion':
+          DateFormat('yyyy-MM-dd').format(DateTime.now()).toString(),
     };
 
     return Scaffold(
