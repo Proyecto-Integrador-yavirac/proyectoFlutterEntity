@@ -124,6 +124,7 @@ class CustomForm extends StatelessWidget {
             keyboardType: TextInputType.text,
             obscureText: false,
           ),
+           
           InputDatePickerField(
             formProperty: 'fechaCreacion',
             formValues: empresaValues,
