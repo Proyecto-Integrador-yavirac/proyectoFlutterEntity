@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(152, 41, 5, 119),
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(2),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
