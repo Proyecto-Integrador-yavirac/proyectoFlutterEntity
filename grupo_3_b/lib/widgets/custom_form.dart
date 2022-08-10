@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grupo_3_b/models/empresa.dart';
+import 'package:grupo_3_b/widgets/input_date_picker.dart';
 import 'package:grupo_3_b/widgets/widgets.dart';
 
 import '../themes/theme.dart';
@@ -47,11 +47,11 @@ class CustomForm extends StatelessWidget {
             helperText: 'ingrese al menos 9 numeros',
             suffixIcon: const Icon(
               Icons.travel_explore_sharp,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 2, 74, 3),
             ),
             icon: const Icon(
               Icons.supervised_user_circle_rounded,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 2, 74, 13),
             ),
             keyboardType: TextInputType.text,
             obscureText: false,
@@ -64,11 +64,11 @@ class CustomForm extends StatelessWidget {
             helperText: 'Breve detalle a que se dedica la empresa ',
             suffixIcon: const Icon(
               Icons.supervisor_account,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 4, 93, 16),
             ),
             icon: const Icon(
               Icons.supervised_user_circle_rounded,
-              color: AppTheme.primary,
+              color: Color.fromARGB(255, 15, 74, 2),
             ),
             keyboardType: TextInputType.text,
             obscureText: false,
@@ -107,20 +107,15 @@ class CustomForm extends StatelessWidget {
             keyboardType: TextInputType.text,
             obscureText: false,
           ),
-          const CheckboxToggle(value: false),
-          ElevatedButton(
+          InputDatePickerField(
+            formProperty: 'fechaCreacion',
+            formValues: empresaValues,
+          ),
+          CheckboxToggle(formValues: empresaValues, formProperty: 'estado'),
+          ElevatedButton.icon(
             onPressed: onChanged,
-            style: ElevatedButton.styleFrom(
-            primary: AppTheme.primary, 
-            shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-              ), 
-              child: const Text(
-                    'Guardar',
-                    style: TextStyle(fontSize: 18),
-                ),
-                
+            icon: const Icon(Icons.save),
+            label: const Text('Guardar'),
           )
         ],
       ),
