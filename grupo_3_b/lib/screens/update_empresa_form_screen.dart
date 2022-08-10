@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grupo_3_b/widgets/alert_dialog.dart';
 import 'package:grupo_3_b/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -38,7 +39,11 @@ class UpdateEmpresaForm extends StatelessWidget {
               empresaValues: valores,
               onChanged: () => {
                     empresaProvider.updateEmpresa(valores),
-                    Navigator.pop(context)
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) =>
+                            const AlertDialogDatabaseResponse(
+                                title: "Se ha actualizado exitosamente")),
                   })),
     );
   }

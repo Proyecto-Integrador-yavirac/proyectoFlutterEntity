@@ -10,7 +10,7 @@ class Empresa {
   String? email;
   String? direccion;
   int numeroEmpleados;
-  DateTime? fechaCreacion;
+  String? fechaCreacion;
 
   Empresa(
       {this.id,

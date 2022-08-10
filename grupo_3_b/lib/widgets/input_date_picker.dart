@@ -15,7 +15,7 @@ class _InputDatePickerFieldState extends State<InputDatePickerField> {
   @override
   Widget build(BuildContext context) {
     return InputDatePickerFormField(
-        firstDate: DateTime(2019),
+        firstDate: DateTime(1900),
         lastDate: DateTime(3020, 12, 12),
         initialDate: widget.formValues[widget.formProperty],
         onDateSubmitted: (date) {

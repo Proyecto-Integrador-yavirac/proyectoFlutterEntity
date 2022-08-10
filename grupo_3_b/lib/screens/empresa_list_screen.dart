@@ -41,12 +41,14 @@ class EmpresaList extends StatelessWidget {
                   ],
                 ),
                 onTap: () {
+                  Map<String, dynamic> empresa =
+                      empresaProvider.empresas[index].toMap();
+
                   Navigator.push(
                       context,
                       (MaterialPageRoute(
                           builder: (context) => UpdateEmpresaForm(
-                                empresaValues:
-                                    empresaProvider.empresas[index].toMap(),
+                                empresaValues: empresa,
                               ))));
                 },
               ),

@@ -8,15 +8,15 @@ class EmpresaProvider extends ChangeNotifier {
   final String _baseUrl = 'localhost:8080';
   String language = 'es-ES';
   Empresa empresa = Empresa(
-    ruc: '',
-    nombre: '',
-    estado: true,
-    telefono: '',
-    descripcion: '',
-    email: '',
-    direccion: '',
-    numeroEmpleados: 0,
-  );
+      ruc: '',
+      nombre: '',
+      estado: true,
+      telefono: '',
+      descripcion: '',
+      email: '',
+      direccion: '',
+      numeroEmpleados: 0,
+      fechaCreacion: '');
 
   final List<Empresa> empresas = [];
 
@@ -29,6 +29,7 @@ class EmpresaProvider extends ChangeNotifier {
     var response = await http.get(url);
 
     List<dynamic> usersList = json.decode(response.body);
+    print(usersList);
     usersList.forEach((empresa) {
       final empresaTemp = Empresa.fromMap(empresa);
       empresas.add(empresaTemp);
