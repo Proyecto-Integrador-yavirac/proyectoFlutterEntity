@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import '../providers/providers.dart';
+import '../widgets/alert_dialog.dart';
 import '../widgets/widgets.dart';
 
 class CreateEmpresaForm extends StatelessWidget {
@@ -21,7 +22,8 @@ class CreateEmpresaForm extends StatelessWidget {
       'descripcion': '',
       'email': '',
       'direccion': '',
-      'numeroEmpleados': 0,
+      'numeroEmpleados': 0.toString(),
+      'fechaCreacion': DateTime.now().toString(),
     };
 
     return Scaffold(
@@ -48,7 +50,11 @@ class CreateEmpresaForm extends StatelessWidget {
         empresaValues: empresaValues,
         onChanged: () => {
           empresaProvider.createEmpresa(empresaValues),
-          Navigator.pop(context)
+          showDialog(
+              context: context,
+              builder: (BuildContext context) =>
+                  const AlertDialogDatabaseResponse(
+                      title: "Se ha creado exitosamente")),
         },
       )),
     );

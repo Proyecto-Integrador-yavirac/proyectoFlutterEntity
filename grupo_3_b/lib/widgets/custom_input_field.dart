@@ -28,21 +28,22 @@ class CustomInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      initialValue: formValues[formProperty],
-      textCapitalization: TextCapitalization.words,
-      onChanged: (value) => formValues[formProperty] = value,
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-
-      decoration: InputDecoration(
-        hintText: '$hintText',
-        labelText: '$labelText',
-        helperText: '$helperText',
-        suffixIcon: suffixIcon,
-        icon: icon,
-      ),
-    );
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: TextFormField(
+          keyboardType: keyboardType,
+          obscureText: obscureText,
+          initialValue: formValues[formProperty].toString(),
+          textCapitalization: TextCapitalization.words,
+          onChanged: (value) => formValues[formProperty] = value,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          decoration: InputDecoration(
+            hintText: '$hintText',
+            labelText: '$labelText',
+            helperText: '$helperText',
+            suffixIcon: suffixIcon,
+            icon: icon,
+          ),
+        ));
   }
 }
