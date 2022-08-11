@@ -128,8 +128,8 @@ class CustomForm extends StatelessWidget {
                   obscureText: false,
                 ),
                 Container(
-                  width: 40,
-                  height: 40,
+                  // width: 40,
+                  // height: 40,
                   child: Row(
                     children: [
                       const Icon(
