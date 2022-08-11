@@ -46,7 +46,7 @@ class CustomInputField extends StatelessWidget {
             hintText: '$hintText',
             hintStyle: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             labelStyle: const TextStyle(color:Colors.white ),
-            
+            helperStyle:const TextStyle(color: Color.fromARGB(255, 59, 209, 255)),
             labelText: '$labelText',
             helperText: '$helperText',
             suffixIcon: suffixIcon,
