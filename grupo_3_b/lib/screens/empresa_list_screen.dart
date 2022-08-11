@@ -12,6 +12,7 @@ class EmpresaList extends StatelessWidget {
   Widget build(BuildContext context) {
     final empresaProvider = Provider.of<EmpresaProvider>(context);
     return Scaffold(
+      backgroundColor: AppTheme.primary,
       appBar: AppBar(
         title: const Text('Lista'),
         flexibleSpace: Container(
@@ -24,16 +25,25 @@ class EmpresaList extends StatelessWidget {
           itemBuilder: (context, index) => ListTile(
                 leading: const Icon(
                   Icons.apartment,
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
                 title: Row(
                   children: [
-                    const Text("Ruc:"),
-                    Text(empresaProvider.empresas[index].ruc),
+                    const Text("Ruc:",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 59, 209, 255))),
+                    Text(empresaProvider.empresas[index].ruc,
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255))),
                     const SizedBox(
-                      width: 100,
+                      width: 50,
                     ),
-                    const Text("Nombre:"),
-                    Text(empresaProvider.empresas[index].nombre)
+                    const Text("Nombre:",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 59, 209, 255))),
+                    Text(empresaProvider.empresas[index].nombre,
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)))
                   ],
                 ),
                 onTap: () {

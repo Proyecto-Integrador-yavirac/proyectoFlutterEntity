@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final menuOptions = AppRoutes.menuOptions;
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 254, 255, 255),
+        backgroundColor: AppTheme.primary,
         appBar: AppBar(
           title: const Text('Empresas'),
           flexibleSpace: Container(
@@ -33,8 +33,18 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(152, 41, 5, 119),
-                      borderRadius: BorderRadius.circular(2),
+                      border: Border.all(
+      color: const Color.fromARGB(255, 59, 209, 255),
+    ),
+                      gradient:const LinearGradient(
+              colors: [
+                Color.fromARGB(255, 45, 52, 190),
+                Color.fromARGB(255, 0, 29, 95)
+              ],
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
+            ) ,
+                      borderRadius: BorderRadius.circular(12),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           menuOptions[index].name,
                           style: const TextStyle(
-                            color: Color.fromARGB(255, 246, 245, 245),
+                            color: Color.fromARGB(255, 246, 245, 245),fontWeight:FontWeight.w500
                           ),
                         ),
                       ],

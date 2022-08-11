@@ -29,7 +29,7 @@ class CreateEmpresaForm extends StatelessWidget {
     };
 //Scaffold hEasdasdasdasd
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 0, 58),
+      backgroundColor: AppTheme.primary,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0,

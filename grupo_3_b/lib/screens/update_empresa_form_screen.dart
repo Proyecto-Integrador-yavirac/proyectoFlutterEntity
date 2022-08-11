@@ -18,6 +18,7 @@ class UpdateEmpresaForm extends StatelessWidget {
     final empresaProvider = Provider.of<EmpresaProvider>(context);
 
     return Scaffold(
+      backgroundColor: AppTheme.primary,
       appBar: AppBar(
           elevation: 0,
           title: const Text('Formulario edita'),
