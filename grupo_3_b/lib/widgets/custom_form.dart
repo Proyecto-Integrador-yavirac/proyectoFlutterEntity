@@ -33,7 +33,6 @@ class CustomForm extends StatelessWidget {
                     Icons.supervisor_account,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -47,7 +46,6 @@ class CustomForm extends StatelessWidget {
                     Icons.person,
                     color: Color.fromARGB(255, 254, 254, 255),
                   ),
-                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -61,7 +59,6 @@ class CustomForm extends StatelessWidget {
                     Icons.phone,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                 
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -75,7 +72,6 @@ class CustomForm extends StatelessWidget {
                     Icons.description,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -89,7 +85,6 @@ class CustomForm extends StatelessWidget {
                     Icons.mail,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -103,7 +98,6 @@ class CustomForm extends StatelessWidget {
                     Icons.calendar_month,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -117,7 +111,6 @@ class CustomForm extends StatelessWidget {
                     Icons.supervisor_account,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                 
                   keyboardType: TextInputType.number,
                   obscureText: false,
                 ),
@@ -131,11 +124,12 @@ class CustomForm extends StatelessWidget {
                     Icons.directions_run,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
                 Container(
+                  width: 40,
+                  height: 40,
                   child: Row(
                     children: [
                       const Icon(
@@ -143,24 +137,23 @@ class CustomForm extends StatelessWidget {
                         color: Color.fromARGB(255, 59, 209, 255),
                       ),
                       const Text("Activo",
-                       style: TextStyle(
-                      color: Color.fromARGB(255, 59, 209, 255))),
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 59, 209, 255))),
                       CheckboxToggle(
                           formValues: empresaValues, formProperty: 'estado')
                     ],
                   ),
                 ),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                  primary: AppTheme.primary,
-                  onPrimary: const Color.fromARGB(255, 255, 255, 255),
-                  side: const BorderSide(color: Color.fromARGB(255, 59, 209, 255), width: 1),
-                  ),
-                  onPressed: onChanged,
-                  child: const Text('Guardar',
-                    style: TextStyle(fontSize: 16))
-
-                )
+                    style: ElevatedButton.styleFrom(
+                      primary: AppTheme.primary,
+                      onPrimary: const Color.fromARGB(255, 255, 255, 255),
+                      side: const BorderSide(
+                          color: Color.fromARGB(255, 59, 209, 255), width: 1),
+                    ),
+                    onPressed: onChanged,
+                    child:
+                        const Text('Guardar', style: TextStyle(fontSize: 16)))
               ],
             )));
   }
