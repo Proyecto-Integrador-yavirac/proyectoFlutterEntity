@@ -14,14 +14,17 @@ class InputDatePickerField extends StatefulWidget {
 class _InputDatePickerFieldState extends State<InputDatePickerField> {
   @override
   Widget build(BuildContext context) {
-    return InputDatePickerFormField(
-        firstDate: DateTime(1900),
-        lastDate: DateTime(3020, 12, 12),
-        initialDate: widget.formValues[widget.formProperty],
-        onDateSubmitted: (date) {
-          setState(() {
-            widget.formValues[widget.formProperty] = '$date';
-          });
+    return TextButton(
+        child: const Text('Calendar'),
+        onPressed: () async {
+          final date = await showDatePicker(
+              initialEntryMode: DatePickerEntryMode.input,
+              context: context,
+              initialDate:
+                  DateTime.parse(widget.formValues[widget.formProperty]),
+              firstDate: DateTime(1900),
+              lastDate: DateTime.now());
+          widget.formValues[widget.formProperty] = date.toString();
         });
   }
 }

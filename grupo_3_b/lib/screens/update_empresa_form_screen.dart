@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grupo_3_b/widgets/alert_dialog.dart';
 import 'package:grupo_3_b/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -23,9 +22,7 @@ class UpdateEmpresaForm extends StatelessWidget {
           elevation: 0,
           title: const Text('Formulario edita'),
           flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: AppTheme.graduado
-            ),
+            decoration: const BoxDecoration(gradient: AppTheme.graduado),
           )),
       body: SingleChildScrollView(
           child: CustomForm(

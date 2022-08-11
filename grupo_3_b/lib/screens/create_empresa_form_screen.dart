@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../providers/providers.dart';
 import '../themes/theme.dart';
-import '../widgets/alert_dialog.dart';
 import '../widgets/widgets.dart';
 
 class CreateEmpresaForm extends StatelessWidget {
@@ -36,9 +35,7 @@ class CreateEmpresaForm extends StatelessWidget {
         elevation: 0,
         title: const Text('Formulario'),
         flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: AppTheme.graduado
-          ),
+          decoration: const BoxDecoration(gradient: AppTheme.graduado),
         ),
       ),
       body: SingleChildScrollView(
