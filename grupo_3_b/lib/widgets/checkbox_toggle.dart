@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grupo_3_b/themes/theme.dart';
 
 class CheckboxToggle extends StatefulWidget {
   final Map<String, dynamic> formValues;
@@ -24,8 +25,8 @@ class _CheckboxToggleState extends State<CheckboxToggle> {
           widget.formValues[widget.formProperty] = value;
         });
       },
-      activeTrackColor: Colors.lightGreenAccent,
-      activeColor: Colors.green,
+      activeTrackColor: Color.fromARGB(255, 20, 97, 184),
+      activeColor: Color.fromARGB(255, 6, 50, 100),
     );
   }
 }

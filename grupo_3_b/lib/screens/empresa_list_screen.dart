@@ -3,6 +3,8 @@ import 'package:grupo_3_b/providers/providers.dart';
 import 'package:grupo_3_b/screens/screens.dart';
 import 'package:provider/provider.dart';
 
+import '../themes/theme.dart';
+
 class EmpresaList extends StatelessWidget {
   const EmpresaList({Key? key}) : super(key: key);
 
@@ -14,14 +16,7 @@ class EmpresaList extends StatelessWidget {
         title: const Text('Lista'),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 92, 96, 185),
-                Color.fromARGB(255, 2, 28, 90)
-              ],
-              begin: Alignment.bottomRight,
-              end: Alignment.topLeft,
-            ),
+            gradient: AppTheme.graduado
           ),
         ),
       ),

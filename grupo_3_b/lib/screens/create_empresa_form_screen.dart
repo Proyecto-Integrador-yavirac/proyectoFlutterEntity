@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../providers/providers.dart';
+import '../themes/theme.dart';
 import '../widgets/alert_dialog.dart';
 import '../widgets/widgets.dart';
 
@@ -29,20 +30,14 @@ class CreateEmpresaForm extends StatelessWidget {
     };
 //Scaffold hEasdasdasdasd
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 0, 0, 58),
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0,
         title: const Text('Formulario'),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 92, 96, 185),
-                Color.fromARGB(255, 2, 28, 90)
-              ],
-              begin: Alignment.bottomRight,
-              end: Alignment.topLeft,
-            ),
+            gradient: AppTheme.graduado
           ),
         ),
       ),

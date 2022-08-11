@@ -31,12 +31,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'solo rucs validos',
                   suffixIcon: const Icon(
                     Icons.supervisor_account,
-                    color: AppTheme.primary,
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.supervised_user_circle_rounded,
-                    color: AppTheme.primary,
-                  ),
+                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -48,12 +45,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'El nombre debe ser de mas de 3 letras',
                   suffixIcon: const Icon(
                     Icons.person,
-                    color: AppTheme.primary,
+                    color: Color.fromARGB(255, 254, 254, 255),
                   ),
-                  icon: const Icon(
-                    Icons.person,
-                    color: AppTheme.primary,
-                  ),
+                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -65,12 +59,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'ingrese al menos 9 numeros',
                   suffixIcon: const Icon(
                     Icons.phone,
-                    color: Color.fromARGB(255, 2, 74, 3),
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.phone,
-                    color: Color.fromARGB(255, 2, 74, 13),
-                  ),
+                 
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -82,12 +73,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'Breve detalle a que se dedica la empresa ',
                   suffixIcon: const Icon(
                     Icons.description,
-                    color: Color.fromARGB(255, 4, 93, 16),
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.description,
-                    color: Color.fromARGB(255, 15, 74, 2),
-                  ),
+                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -99,12 +87,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'Ingrese @',
                   suffixIcon: const Icon(
                     Icons.mail,
-                    color: AppTheme.primary,
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.mail,
-                    color: AppTheme.primary,
-                  ),
+                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -116,12 +101,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'Ingrese una fecha valida(YYYY-MM-DD)',
                   suffixIcon: const Icon(
                     Icons.calendar_month,
-                    color: AppTheme.primary,
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.calendar_month,
-                    color: AppTheme.primary,
-                  ),
+                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -133,12 +115,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'Solo numeros',
                   suffixIcon: const Icon(
                     Icons.supervisor_account,
-                    color: AppTheme.primary,
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.supervised_user_circle_rounded,
-                    color: AppTheme.primary,
-                  ),
+                 
                   keyboardType: TextInputType.number,
                   obscureText: false,
                 ),
@@ -150,12 +129,9 @@ class CustomForm extends StatelessWidget {
                   helperText: 'Ingrese una direccion',
                   suffixIcon: const Icon(
                     Icons.directions_run,
-                    color: AppTheme.primary,
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
-                  icon: const Icon(
-                    Icons.directions_run,
-                    color: AppTheme.primary,
-                  ),
+                  
                   keyboardType: TextInputType.text,
                   obscureText: false,
                 ),
@@ -164,18 +140,26 @@ class CustomForm extends StatelessWidget {
                     children: [
                       const Icon(
                         Icons.factory_outlined,
-                        color: AppTheme.primary,
+                        color: Color.fromARGB(255, 59, 209, 255),
                       ),
-                      const Text("Activo"),
+                      const Text("Activo",
+                       style: TextStyle(
+                      color: Color.fromARGB(255, 59, 209, 255))),
                       CheckboxToggle(
                           formValues: empresaValues, formProperty: 'estado')
                     ],
                   ),
                 ),
-                ElevatedButton.icon(
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                  primary: AppTheme.primary,
+                  onPrimary: const Color.fromARGB(255, 255, 255, 255),
+                  side: const BorderSide(color: Color.fromARGB(255, 59, 209, 255), width: 1),
+                  ),
                   onPressed: onChanged,
-                  icon: const Icon(Icons.save),
-                  label: const Text('Guardar'),
+                  child: const Text('Guardar',
+                    style: TextStyle(fontSize: 16))
+
                 )
               ],
             )));

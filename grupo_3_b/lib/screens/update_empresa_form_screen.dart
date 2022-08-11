@@ -4,6 +4,7 @@ import 'package:grupo_3_b/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/providers.dart';
+import '../themes/theme.dart';
 
 class UpdateEmpresaForm extends StatelessWidget {
   final Map<String, dynamic> empresaValues;
@@ -23,14 +24,7 @@ class UpdateEmpresaForm extends StatelessWidget {
           title: const Text('Formulario edita'),
           flexibleSpace: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 92, 96, 185),
-                  Color.fromARGB(255, 2, 28, 90)
-                ],
-                begin: Alignment.bottomRight,
-                end: Alignment.topLeft,
-              ),
+              gradient: AppTheme.graduado
             ),
           )),
       body: SingleChildScrollView(

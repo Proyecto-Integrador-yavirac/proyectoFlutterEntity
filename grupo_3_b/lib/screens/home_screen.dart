@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grupo_3_b/themes/theme.dart';
 
 import '../routers/routers.dart';
 
@@ -14,14 +15,7 @@ class HomeScreen extends StatelessWidget {
           title: const Text('Empresas'),
           flexibleSpace: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 92, 96, 185),
-                  Color.fromARGB(255, 2, 28, 90)
-                ],
-                begin: Alignment.bottomRight,
-                end: Alignment.topLeft,
-              ),
+              gradient: AppTheme.graduado
             ),
           ),
           elevation: 20,

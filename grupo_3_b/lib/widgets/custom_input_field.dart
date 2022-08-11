@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grupo_3_b/themes/theme.dart';
 
 class CustomInputField extends StatelessWidget {
   final String? hintText;
@@ -27,8 +28,9 @@ class CustomInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(5),
         child: TextFormField(
+          style: TextStyle(color: Colors.white),
           keyboardType: keyboardType,
           obscureText: obscureText,
           initialValue: formValues[formProperty].toString(),
@@ -36,11 +38,20 @@ class CustomInputField extends StatelessWidget {
           onChanged: (value) => formValues[formProperty] = value,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
+            focusedBorder:OutlineInputBorder(
+            borderSide: const BorderSide(color: Color.fromARGB(255, 59, 209, 255), width: 2.0),
+            borderRadius: BorderRadius.circular(19.0),
+          ),
+            
             hintText: '$hintText',
+            hintStyle: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+            labelStyle: const TextStyle(color:Colors.white ),
+            
             labelText: '$labelText',
             helperText: '$helperText',
             suffixIcon: suffixIcon,
-            icon: icon,
+            filled: true,
+            fillColor: AppTheme.primary,
           ),
         ));
   }
