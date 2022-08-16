@@ -28,21 +28,16 @@ class EmpresaList extends StatelessWidget {
                 ),
                 title: Row(
                   children: [
-                    const Text("Ruc:",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 59, 209, 255))),
-                    Text(empresaProvider.empresas[index].ruc,
-                        style: const TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255))),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    const Text("Nombre:",
+                    
+                    const Text("Empresa:",
                         style: TextStyle(
                             color: Color.fromARGB(255, 59, 209, 255))),
                     Text(empresaProvider.empresas[index].nombre,
                         style: const TextStyle(
                             color: Color.fromARGB(255, 255, 255, 255))),
+                             const SizedBox(
+                      width: 30,
+                    ),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           primary: AppTheme.primary,
@@ -56,7 +51,7 @@ class EmpresaList extends StatelessWidget {
                                   context: context,
                                   builder: (BuildContext context) =>
                                       AlertDialogDatabaseResponse(
-                                        title: "Se ha eliminado exitosamente",
+                                        title: "Seguro que desea Eliminar el registro? esta accion es irreversible",
                                         button: [
                                           TextButton(
                                             child: Text('Si'),
@@ -64,7 +59,23 @@ class EmpresaList extends StatelessWidget {
                                               empresaProvider.deleteEmpresa(
                                                   empresaProvider
                                                       .empresas[index].id);
+                                                      Navigator.of(context).pop();
+                                                       showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      AlertDialogDatabaseResponse(
+                                        title: "Eliminado Correctamente",
+                                        button: [
+                                          
+                                          TextButton(
+                                            child: Text('Aceptar'),
+                                            onPressed: () {
                                               Navigator.of(context).pop();
+                                            },
+                                          ),
+                                        ],
+                                      ));
+                                              
                                             },
                                           ),
                                           TextButton(
@@ -76,8 +87,10 @@ class EmpresaList extends StatelessWidget {
                                         ],
                                       ))
                             },
-                        child: const Text('Eliminar',
-                            style: TextStyle(fontSize: 16)))
+                        child: const Icon(
+                    Icons.delete,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),)
                   ],
                 ),
                 onTap: () {
