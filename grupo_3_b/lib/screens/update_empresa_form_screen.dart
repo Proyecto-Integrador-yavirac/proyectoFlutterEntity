@@ -34,8 +34,17 @@ class UpdateEmpresaForm extends StatelessWidget {
                     showDialog(
                         context: context,
                         builder: (BuildContext context) =>
-                            const AlertDialogDatabaseResponse(
-                                title: "Se ha actualizado exitosamente")),
+                            AlertDialogDatabaseResponse(
+                              title: "Se ha actualizado exitosamente",
+                              button: [
+                                TextButton(
+                                  child: Text('Aceptar'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ],
+                            )),
                   })),
     );
   }

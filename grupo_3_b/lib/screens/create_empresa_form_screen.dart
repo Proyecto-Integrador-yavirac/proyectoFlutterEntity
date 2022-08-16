@@ -46,9 +46,17 @@ class CreateEmpresaForm extends StatelessWidget {
           empresaProvider.createEmpresa(empresaValues),
           showDialog(
               context: context,
-              builder: (BuildContext context) =>
-                  const AlertDialogDatabaseResponse(
-                      title: "Se ha creado exitosamente")),
+              builder: (BuildContext context) => AlertDialogDatabaseResponse(
+                    title: "Se ha creado exitosamente",
+                    button: [
+                      TextButton(
+                        child: const Text('Aceptar'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                  )),
         },
       )),
     );

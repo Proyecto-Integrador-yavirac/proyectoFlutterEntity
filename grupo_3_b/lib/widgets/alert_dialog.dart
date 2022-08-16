@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class AlertDialogDatabaseResponse extends StatelessWidget {
   final String title;
   final String? content;
-
+  final List<Widget> button;
   const AlertDialogDatabaseResponse(
-      {super.key, required this.title, this.content});
+      {super.key, required this.title, this.content, required this.button});
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +19,7 @@ class AlertDialogDatabaseResponse extends StatelessWidget {
           ],
         ),
       ),
-      actions: <Widget>[
-        TextButton(
-          child: const Text('Aceptar'),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-      ],
+      actions: button
     );
   }
 }

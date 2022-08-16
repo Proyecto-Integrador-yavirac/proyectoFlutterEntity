@@ -74,8 +74,8 @@ class EmpresaProvider extends ChangeNotifier {
         body: jsonEncode(request));
   }
 
-  deleteEmpresa(int id) async {
-    var url = Uri.http(_baseUrl, 'api/empresa/$id');
+  deleteEmpresa(int? id) async {
+    var url = Uri.http(_baseUrl, 'api/empresa/deleteById/$id');
     await http.delete(url);
   }
 }
